@@ -8,7 +8,7 @@ display = lcddriver.lcd()
 TRIG = 23 
 ECHO = 24
 
-print "Distance Measurement In Progress"
+print("Distance Measurement In Progress")
 display.lcd_display_string("Distance :", 1)
 GPIO.setup(TRIG,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
@@ -16,7 +16,7 @@ try:
     while True:
 
         GPIO.output(TRIG, False)
-        print "Waiting For Sensor To Settle"
+        print("Waiting For Sensor To Settle")
         
         time.sleep(2)
 
@@ -36,7 +36,7 @@ try:
 
         distance = round(distance, 2)
 
-        result = str(distance)+" cm"
+        result = str(distance)+" cm                    "
         display.lcd_display_string(result,2);
 
 except KeyboardInterrupt: # If there is a KeyboardInterrupt (when you press ctrl+c), exit the program and cleanup
