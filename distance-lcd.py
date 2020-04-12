@@ -36,7 +36,7 @@ try:
 
         distance = round(distance, 2)
 
-        result = str(distance)+" cm                    "
+        result = str(distance)+" cm                    " # lazy way to add more space to stop multiplying of 'cm' word 
         display.lcd_display_string(result,2);
 
 except KeyboardInterrupt: # If there is a KeyboardInterrupt (when you press ctrl+c), exit the program and cleanup
